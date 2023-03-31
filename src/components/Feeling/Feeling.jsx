@@ -16,11 +16,12 @@ function Feeling() {
             type: 'FEELINGS',
             payload: number
         })
-        // history.push('/understanding') //this will send the next button to the next page 
+        history.push('/understanding') //this will send the next button to the next page 
        }
 
        const handleFeelings = (event) => {
         setNumber(event.target.value)
+        console.log('looking at number', number)
        }
 
 
