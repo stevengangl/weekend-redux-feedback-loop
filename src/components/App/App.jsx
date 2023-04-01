@@ -7,40 +7,45 @@ import Feeling from '../Feeling/Feeling';
 import Supported from '../Supported/Supported';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
+import Success from '../Success/Success';
+import Header from '../Header/Header';
 
 function App() {
 
   return (
     <div className='App'>
       <Router>
-      <header className='App-header'>
-        <h1 className='App-title'>Feedback!</h1>
-        <h4>Don't forget it!</h4>
-      </header>
-    
 
-      <Route exact path="/">
-        <Feeling />
-      </Route>
+        <Route exact path="/">
+          <Header />
+          <Feeling />
+        </Route>
 
-      <Route exact path ="/understanding">
-        <Understanding />
-      </Route>
+        <Route exact path="/understanding">
+          <Header />
+          <Understanding />
+        </Route>
 
-    <Route exact path ="/supported">
-      <Supported />
-    </Route>
+        <Route exact path="/supported">
+          <Header />
+          <Supported />
+        </Route>
 
-    <Route exact path="/comments">
-      <Comments />
-    </Route>
+        <Route exact path="/comments">
+          <Header />
+          <Comments />
+        </Route>
 
-    <Route exact path="/review">
-      <Review />
-    </Route>
+        <Route exact path="/review">
+          <Review />
+        </Route>
+
+        <Route exact path="/success">
+          <Success />
+        </Route>
 
       </Router>
-     
+
     </div>
   );
 }
