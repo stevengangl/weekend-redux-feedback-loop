@@ -1,9 +1,48 @@
-
+import { useDispatch } from "react-redux"
+import { useHistory } from 'react-router-dom';
+import { useState } from "react";
 
 function Understanding() {
+    const history = useHistory();
+    const dispatch = useDispatch();
+    const [feelingsNumber, setFeelingsNumber] = useState('')
+    //need to store the feelings number here and send it to the reducers
+
+
+    const handleClick = () => {
+
+            dispatch({
+                type: "UNDERSTANDING",
+                payload: feelingsNumber
+            })
+            // history.push(;/) need to make route to next page here
+    }
+
+    const handleFeelings = (event) => {
+        setFeelingsNumber(event.target.value)
+        console.log('looking at feeling #:', feelingsNumber)
+    }
+
+
 
     return (
-        console.log('in understanding comp')
+        <>
+            <div>
+                <h2>How well are you understanding the content?</h2>
+                <h5 id='understanding'>Understanding?</h5>
+                <input
+                    type='number'
+                    value={feelingsNumber} 
+                    onChange={handleFeelings}
+                    placeholder='0'
+                    />
+
+
+            </div>
+            <div>
+                <button id='nextBtn' onClick={handleClick}>Next</button>
+            </div>
+        </>
     )
 }
 

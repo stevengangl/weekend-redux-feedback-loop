@@ -3,6 +3,10 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
-h5{
+#feeling{
   color: blue;
+}
+
+#understanding{
+  color: lightgray;
 }

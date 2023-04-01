@@ -1,15 +1,14 @@
-import { useSelector, useDispatch } from "react-redux"
+import { useDispatch } from "react-redux"
 import { useHistory } from 'react-router-dom';
 import { useState } from "react";
 
 
 function Feeling() {
     const dispatch = useDispatch();
-
+    const history = useHistory();
     const [number, setNumber] = useState('')
  
     //still need to make next page
-    const history = useHistory();
     const handleClick = () => {
 
         dispatch({
@@ -29,8 +28,7 @@ function Feeling() {
         <>
             <div>
                 <h2>How are you feeling today?</h2>
-                <h5>Feeling?</h5>
-                <h3>put score for feelings here</h3>
+                <h5 id='feeling'>Feeling?</h5>
                 <input
                     type='number'
                     value={number} 
