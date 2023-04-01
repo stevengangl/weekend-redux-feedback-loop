@@ -16,11 +16,21 @@ if(action.type === 'FEELINGS'){
 
 
 //Reducer for understanding page
-
+const understanding = (state = [], action) => {
+    if(action.type === 'UNDERSTANDING'){
+        return [...state, action.payload]
+    }
+    return state
+}
 
 
 //Reducer for support page
-
+const supported = (state = [], action) => {
+    if(action.type === 'SUPPORT'){
+        return [...state, action.payload]
+    }
+    return state
+}
 
 
 //Reducer for comments page
@@ -36,7 +46,8 @@ if(action.type === 'FEELINGS'){
 const storeInstance = createStore(
     combineReducers({
         //list of reducers will go here
-        feeling
+        feeling,
+        understanding
     }),
     applyMiddleware(logger)
 );

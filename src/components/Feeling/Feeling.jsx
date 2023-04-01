@@ -39,7 +39,7 @@ function Feeling() {
 
             </div>
             <div>
-                <button id='nextBtn' onClick={handleClick}>Next</button>
+                <button className='nextBtn' onClick={handleClick}>Next</button>
             </div>
 
         </>

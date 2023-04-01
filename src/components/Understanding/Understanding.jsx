@@ -15,7 +15,7 @@ function Understanding() {
                 type: "UNDERSTANDING",
                 payload: feelingsNumber
             })
-            // history.push(;/) need to make route to next page here
+            history.push("/supported")
     }
 
     const handleFeelings = (event) => {
@@ -40,7 +40,7 @@ function Understanding() {
 
             </div>
             <div>
-                <button id='nextBtn' onClick={handleClick}>Next</button>
+                <button className='nextBtn' onClick={handleClick}>Next</button>
             </div>
         </>
     )
