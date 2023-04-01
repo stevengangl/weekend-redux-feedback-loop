@@ -34,7 +34,12 @@ const supported = (state = [], action) => {
 
 
 //Reducer for comments page
-
+const comments = (state = [], action) => {
+    if(action.type === 'COMMENTS'){
+        return [...state, action.payload]
+    }
+    return state
+}
 
 
 //Reducer for review page...All data will be displayed on this page
@@ -47,7 +52,9 @@ const storeInstance = createStore(
     combineReducers({
         //list of reducers will go here
         feeling,
-        understanding
+        understanding,
+        supported,
+        comments
     }),
     applyMiddleware(logger)
 );
