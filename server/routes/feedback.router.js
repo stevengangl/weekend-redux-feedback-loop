@@ -29,7 +29,6 @@ router.post('/', (req, res) => {
             console.log('post after pool query')
         })
         .catch((error) => {
-            console.log(sqlText, [newPost.feeling[0], newPost.understanding[0], newPost.support[0], newPost.comments[0]])
             // console.log('erroe making query', error)
             res.sendStatus(500);
         })
