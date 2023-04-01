@@ -1,5 +1,22 @@
+import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 
 function Success() {
+
+const dispatch = useDispatch();
+const history = useHistory();
+
+
+const resetReducers = () => {
+
+    dispatch({
+        type: 'CLEAR',
+        payload: []
+    })
+
+    history.push('/')
+
+}
 
     return (
        <>
@@ -10,7 +27,7 @@ function Success() {
 
         <div className='feedback2' >
         <h1>Thankyou!</h1>
-        <button id='feedbackBtn'>Leave New Feedback</button>
+        <button id='feedbackBtn' onClick={resetReducers}>Leave New Feedback</button>
             
         </div>
        </>

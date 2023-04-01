@@ -8,17 +8,23 @@ import logger from "redux-logger";
 
 //Reducer for feeling page
 const feeling = (state = [], action) => {
-if(action.type === 'FEELINGS'){
-    return [...state, action.payload]
-}
+    if (action.type === 'FEELINGS') {
+        return [...state, action.payload]
+    }
+    else if (action.type === 'CLEAR') {
+        return [];
+    }
     return state
 }
 
 
 //Reducer for understanding page
 const understanding = (state = [], action) => {
-    if(action.type === 'UNDERSTANDING'){
+    if (action.type === 'UNDERSTANDING') {
         return [...state, action.payload]
+    }
+    else if (action.type === 'CLEAR') {
+        return [];
     }
     return state
 }
@@ -26,8 +32,11 @@ const understanding = (state = [], action) => {
 
 //Reducer for support page
 const supported = (state = [], action) => {
-    if(action.type === 'SUPPORT'){
+    if (action.type === 'SUPPORT') {
         return [...state, action.payload]
+    }
+    else if (action.type === 'CLEAR') {
+        return [];
     }
     return state
 }
@@ -35,8 +44,11 @@ const supported = (state = [], action) => {
 
 //Reducer for comments page
 const comments = (state = [], action) => {
-    if(action.type === 'COMMENTS'){
+    if (action.type === 'COMMENTS') {
         return [...state, action.payload]
+    }
+    else if (action.type === 'CLEAR') {
+        return [];
     }
     return state
 }
