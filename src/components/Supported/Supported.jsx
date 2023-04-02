@@ -8,12 +8,16 @@ function Supported() {
     const [supportNumber, setSupportNumber] = useState('')
 
     const handleClick = () => {
+        if (supportNumber > 0) {
+            dispacth({
+                type: 'SUPPORT',
+                payload: supportNumber
+            })
+            history.push("/comments")
+        } else {
+            alert('Please enter a number.')
+        }
 
-        dispacth({
-            type: 'SUPPORT',
-            payload: supportNumber
-        })
-        history.push("/comments")
     }
 
 
@@ -29,11 +33,13 @@ function Supported() {
             <div>
                 <h2>How well are you being supported?</h2>
                 <h5 id='support'>Support?</h5>
-                <input 
-                type='number'
-                value={supportNumber}
-                onChange={handleSupport}
-                placeholder='0'
+                <input
+                    type='number'
+                    value={supportNumber}
+                    onChange={handleSupport}
+                    placeholder='0'
+                    min='0'
+                    max='5'
                 />
             </div>
             <div>

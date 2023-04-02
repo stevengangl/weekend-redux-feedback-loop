@@ -10,12 +10,16 @@ function Understanding() {
 
 
     const handleClick = () => {
-
+        if (feelingsNumber > 0) {
             dispatch({
                 type: "UNDERSTANDING",
                 payload: feelingsNumber
             })
             history.push("/supported")
+        } else {
+            alert('Please enter a number.')
+        }
+
     }
 
     const handleFeelings = (event) => {
@@ -32,10 +36,12 @@ function Understanding() {
                 <h5 id='understanding'>Understanding?</h5>
                 <input
                     type='number'
-                    value={feelingsNumber} 
+                    value={feelingsNumber}
                     onChange={handleFeelings}
                     placeholder='0'
-                    />
+                    min='0'
+                    max='5'
+                />
 
 
             </div>

@@ -8,15 +8,17 @@ function Feeling() {
     const history = useHistory();
     const [number, setNumber] = useState('')
  
-    //still need to make next page
     const handleClick = () => {
-
-        dispatch({
-            type: 'FEELINGS',
-            payload: number
-        })
-        history.push('/understanding') //this will send the next button to the next page 
-       }
+        if (number > 0) {
+            dispatch({
+                type: 'FEELINGS',
+                payload: number
+            })
+            history.push('/understanding')
+        } else {
+            alert('Please enter a number.')
+        }
+    }
 
        const handleFeelings = (event) => {
         setNumber(event.target.value)
@@ -34,6 +36,9 @@ function Feeling() {
                     value={number} 
                     onChange={handleFeelings}
                     placeholder='0'
+                    min='0'
+                    max='5'
+                    
                     />
 
 
