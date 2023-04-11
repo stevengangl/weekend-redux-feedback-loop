@@ -1,36 +1,30 @@
-PROJECT NAME: Weekend-redux-feedback-loop
-
-Description
-
-For this assignment, we creared a reflection/feedback form modeled after Prime's system. Feedback will be collected over 4 pages. Than  a separate review page will display the current feedback values and include a submit button. When all steps are complete, yotheur app will save the feedback in the database and send you back to the first page where you can start another review.
+# Weekend-Redux-Loop
 
 
+## Description
 
-Prerequisites
+This application is a student form that lets the user fill out how they are feeling, how they are comprehending the material, how supported they feel and any comments they may have
 
-Node.js, react
+## Screenshots
 
+<img src="./public/images/readme.jpeg" />## Built With
 
-Installation
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" height="40px" width="40px" /></a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" height="40px" width="40px" /></a><a href="https://nodejs.org/en/"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" height="40px" width="40px" /></a><a href="https://reactjs.org/"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" height="40px" width="40px" /></a>
 
--Fork and clone repo from git hub
+## Getting Started
 
--Open Vs code and download dependencies
-    -npm install, npm install redux@4 react-redux@7, redux-logger@3
-
--Create your database and tables using the provided data.sql file.
-
--Open two terminals and run commands, npm run client, npm run server
-    -The npm run client will open the app in a web browser
+Fork and clone repo onto your computer
 
 
-Usage
-How does someone use this application? Tell a user story here.
-1.User will pick how they are feeling about the material 1-5 than hit next
-2.User will pick how they are understanding the material 1-5 than hit next
-3.User will pick how they are being supported 1-5 than hit next
-4.User will write any comments they have than hit next
-5.The user is than brought to a review page where they can see all the info they gave. than they can hit submit which brings them to the feedback page. while also sending the data the user gave to a database to be stored.
-6.On this page the user gets a tahnkyou for providing the feedback and can hit the leave new feedback button. When that is clicked the user is brought back to the home page and the information is erased from the redcuers.
+### Installation
 
-Built With
+Create your database and tables using the provided data.sql file.
+Run npm install
+npm run server
+npm run client
+
+
+
+## Contact Me
+
+<a href="https://www.linkedin.com/in/steven-gangl-965832218/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>  <a href="mailto:steven.h.gangl@gmail.com"><img src=https://raw.githubusercontent.com/johnturner4004/readme-generator/master/src/components/assets/images/email_me_button_icon_151852.svg /></a>
