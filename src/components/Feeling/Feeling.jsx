@@ -30,6 +30,8 @@ function Feeling() {
         <>
             <div>
                 <h2>How are you feeling today?</h2>
+                <h2>How are you feeling today?</h2>
+
                 <h5 id='feeling'>Feeling?</h5>
                 <input
                     type='number'
